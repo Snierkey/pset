@@ -1,0 +1,25 @@
+from setuptools import setup, find_packages
+
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
+
+setup(
+    name="{{ name }}",
+    version="{{ version }}",
+    author="{{ author }}",
+    author_email="{{ email }}",
+    description="{{ description }}",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/{{ author }}/{{ name }}",
+    packages=find_packages(),
+    classifiers=[
+        "Development Status :: 3 - Alpha",
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: {{ license }} License",
+        "Operating System :: OS Independent",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: {{ python_version }}",
+    ],
+    python_requires=">={{ python_version }}",
+)
